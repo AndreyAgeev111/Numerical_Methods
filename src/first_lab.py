@@ -3,12 +3,19 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
+ROOT = 1
+ACCURACY = 0.001
+
+
 def func(x):
-    return x * np.log(x) - x / 2
+    return 1 / x - x**2
 
 
-def func_backward(x):
-    return 0.5 + np.log(x)
+# Производная функции
+
+
+def func_derivative(x):
+    return - (1 / (x**2)) - 2 * x
 
 
 def show_func():
@@ -19,43 +26,108 @@ def show_func():
     plt.grid()
     plt.xlabel('x')
     plt.ylabel('y')
-    plt.title('$y = x * ln(x) - x / 2$')
+    plt.title('$y = 1 / x - x^2$')
     plt.show()
 
 
 def tangent_method():
     # точка, являющаяся границей выбранного нами участка, лежит ближе всего к корню
-    b = 2
+    b = 1.5
     # Вписать любое значение большее b, чтобы первое условие цикло верно выполнилось
-    root = 3
     iter = 1
 
-    while root - b >= 0.001:
+    while True:
         root = b
-        b = b - func(b) / func_backward(b)
-        print(str(iter) + " итерация, корень = " + str(b))
+        b = b - func(b) / func_derivative(b)
+        print(f'{iter} итерация, корень = {b}')
+        if root - b <= ACCURACY:
+            break
         iter += 1
     root = b
-    print("Корень = " + str(root) + ", корень вычисленный аналитически = " + str(math.sqrt(np.e)))
+    print(f'Корень = {root}, корень вычисленный аналитически = {ROOT}')
 
 
 def chord_method():
     # участок, где лежит корень
-    a = 1
+    a = 0.1
     b = 2
     calc_a = (b * func(a) - a * func(b)) / (func(a) - func(b))
     # для выполнения первого условия цикла, боже спаси do-while в питоне((
     root = a
     iter = 1
 
-    while calc_a - root >= 0.001:
+    while root > ROOT + ACCURACY or root < ROOT - ACCURACY:
         root = calc_a
         calc_a = (b * func(calc_a) - calc_a * func(b)) / (func(calc_a) - func(b))
-        print(str(iter) + " итерация, корень = " + str(calc_a))
+        print(f'{iter} итерация, корень = {calc_a}')
         iter += 1
     root = calc_a
-    print("Корень = " + str(root) + ", корень вычисленный аналитически = " + str(math.sqrt(np.e)))
+    print(f'Корень = {root}, корень вычисленный аналитически = {ROOT}')
+
+
+# Метод простых итераций, обозначим функцию через 2 составляющие функции
+
+
+def first_func(x):
+    return 1 / x
+
+
+def second_func(x):
+    return x**2
+
+
+def show_third_method():
+    x = np.linspace(0.01, 5, 1000)
+    plt.plot(x, first_func(x), label="$1 / x$")
+    plt.plot(x, second_func(x), label="$x^2$")
+    plt.xlim([0, 5])
+    plt.ylim([-1, 5])
+    plt.grid()
+    plt.legend()
+    plt.xlabel('x')
+    plt.ylabel('y')
+    plt.title('$1 / x = x^2$')
+    plt.show()
+
+# Производные функций
+
+
+def first_func_derivative(x):
+    return - 1 / (x**2)
+
+
+def second_func_derivative(x):
+    return 2 * x
 
 
 def simple_iterations_method():
-    return 0
+    a = 0.5
+    # выясняем,чья производная функции в точке будет меньше, чтобы выбрать ее первой для метода
+    if first_func_derivative(a) > second_func_derivative(a):
+        calc_a = a
+        func_a = second_func(calc_a)
+        iter = 1
+        root = 1.5
+
+        while root > ROOT + ACCURACY or root < ROOT - ACCURACY:
+            root = calc_a
+            calc_a = 1 / func_a
+            func_a = second_func(calc_a)
+            print(f'{iter} итерация, корень = {calc_a}')
+            iter += 1
+        root = calc_a
+        print(f'Корень = {root}, корень вычисленный аналитически = {ROOT}')
+    else:
+        calc_a = a
+        func_a = first_func(calc_a)
+        iter = 1
+        root = 1.5
+
+        while root > ROOT + ACCURACY or root < ROOT - ACCURACY:
+            root = calc_a
+            calc_a = math.sqrt(func_a)
+            func_a = first_func(calc_a)
+            print(f'{iter} итерация, корень = {calc_a}')
+            iter += 1
+        root = calc_a
+        print(f'Корень = {root}, корень вычисленный аналитически = {ROOT}')
