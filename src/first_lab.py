@@ -2,20 +2,19 @@ import math
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 ROOT = 1
 ACCURACY = 0.001
 
 
 def func(x):
-    return 1 / x - x**2
+    return 1 / x - x ** 2
 
 
 # Производная функции
 
 
 def func_derivative(x):
-    return - (1 / (x**2)) - 2 * x
+    return - (1 / (x ** 2)) - 2 * x
 
 
 def show_func():
@@ -72,14 +71,14 @@ def first_func(x):
 
 
 def second_func(x):
-    return x**2
+    return x ** 2
 
 
 # Производные функций
 
 
 def first_func_derivative(x):
-    return - 1 / (x**2)
+    return - 1 / (x ** 2)
 
 
 def second_func_derivative(x):
@@ -112,7 +111,6 @@ def simple_iterations_method():
         calc_a = a
         func_a = first_func(calc_a)
         iter = 1
-        root = 1.5
         x_coord = [calc_a]
         y_coord = [func_a]
 
