@@ -105,7 +105,6 @@ def simple_iterations_method():
             iter += 1
             x_coord.append(calc_a)
             y_coord.append(func_a)
-        root = calc_a
         print(f'Корень = {root}, корень вычисленный аналитически = {ROOT}')
     else:
         calc_a = a
@@ -124,7 +123,6 @@ def simple_iterations_method():
             iter += 1
             x_coord.append(calc_a)
             y_coord.append(func_a)
-        root = calc_a
         print(f'Корень = {root}, корень вычисленный аналитически = {ROOT}')
 
         x = np.linspace(0.01, 5, 1000)
