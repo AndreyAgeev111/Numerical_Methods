@@ -7,4 +7,4 @@ _____
 ![Alt-текст](https://github.com/AndreyAgeev111/Numerical_Methods/blob/master/res/simple_iteration.png "Простые итерации")
 _____
 ## Блок-схема методов:
-![Alt-текст](https://github.com/AndreyAgeev111/Numerical_Methods/blob/master/res/simple_iteration.png "Блок-схема")
+![Alt-текст](https://github.com/AndreyAgeev111/Numerical_Methods/blob/master/res/flowchart.png "Блок-схема")
