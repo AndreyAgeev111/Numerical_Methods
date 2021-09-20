@@ -17,6 +17,10 @@ def func_derivative(x):
     return - (1 / (x ** 2)) - 2 * x
 
 
+def func_second_derivative(x):
+    return 2 / (x ** 3) - 2
+
+
 def show_func():
     x = np.linspace(0.01, 5, 1000)
     plt.plot(x, func(x))
@@ -30,11 +34,11 @@ def show_func():
 
 
 def tangent_method():
-    # точка, являющаяся границей выбранного нами участка, лежит ближе всего к корню
-    b = 0.2
-    # Вписать любое значение большее b, чтобы первое условие цикло верно выполнилось
+    a = 0.2
+    b = 2
     iter = 1
-
+    if func(a) * func_second_derivative(a) > 0:
+        b = a
     while True:
         root = b
         b = b - func(b) / func_derivative(b)
