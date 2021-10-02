@@ -14,7 +14,7 @@ def func(x):
     return x ** 2 - x * np.log(x)
 
 
-def show_func():
+def show_function():
     x = np.linspace(0.01, 5)
     fig, ax = plt.subplots()
     ax.plot(x, func(x))
