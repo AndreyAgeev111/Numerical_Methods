@@ -1,10 +1,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon
+import time
 
 A, B = 1, 3
 N = 10000
-SUM = 5.72291136766
+SUM = 5.722910795369
 H = (B - A) / N
 X = np.linspace(A, B, N)
 
@@ -36,24 +37,36 @@ def show_func():
 
 
 def square_method():
+    startTime = time.time()
     sum = 0
     for i in range(N - 1):
         sum += func((X[i] + X[i + 1]) / 2) * H
 
+    endTime = time.time()
+    totalTime = endTime - startTime
     print(f'Значение интеграла = {sum}, вычисленное с помощью специализированного ПО = {SUM}')
+    print(f'Время, затраченное на выполнение данного метода = {totalTime} c')
 
 
 def trapezoid_method():
+    startTime = time.time()
     sum = 0
     for i in range(N - 1):
         sum += ((func(X[i]) + func(X[i + 1])) / 2) * H
 
+    endTime = time.time()
+    totalTime = endTime - startTime
     print(f'Значение интеграла = {sum}, вычисленное с помощью специализированного ПО = {SUM}')
+    print(f'Время, затраченное на выполнение данного метода = {totalTime} c')
 
 
 def simpson_method():
+    startTime = time.time()
     sum = 0
     for i in range(1, N):
         sum += (func(X[i - 1]) + 4 * func((X[i - 1] + X[i]) / 2) + func(X[i])) / 6 * H
 
+    endTime = time.time()
+    totalTime = endTime - startTime
     print(f'Значение интеграла = {sum}, вычисленное с помощью специализированного ПО = {SUM}')
+    print(f'Время, затраченное на выполнение данного метода = {totalTime} c')
