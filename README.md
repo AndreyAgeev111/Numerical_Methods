@@ -20,7 +20,7 @@ _____
 ![Alt-текст](https://github.com/AndreyAgeev111/Numerical_Methods/blob/master/res/second_lab_plot.png "График функции")
 -----
 ## Блок-схема методов:
-
+![Alt-текст](https://github.com/AndreyAgeev111/Numerical_Methods/blob/master/res/flowchart_2.png "Блок-схема")
 -----
 ## Таблица с результатами для разбиения участка на 10000 кусочков (интеграл = 5.72291136766):
 | Метод | Метод прямоугольников | Метод трапеций | Метод Симпсона |
