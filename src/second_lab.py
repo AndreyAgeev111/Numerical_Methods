@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon
 
 A, B = 1, 3
+N = 10000
 SUM = 5.72291136766
 
 
@@ -34,33 +35,30 @@ def show_func():
 
 def square_method():
     # На сколько кусочков разобьем интервал
-    n = 10000
-    h = (B - A) / n
-    x = np.linspace(A, B, n)
+    h = (B - A) / N
+    x = np.linspace(A, B, N)
     sum = 0
-    for i in range(n - 1):
+    for i in range(N - 1):
         sum += func((x[i] + x[i + 1]) / 2) * h
 
     print(f'Значение интеграла = {sum}, вычисленное с помощью специализированного ПО = {SUM}')
 
 
 def trapezoid_method():
-    n = 10000
-    h = (B - A) / n
-    x = np.linspace(A, B, n)
+    h = (B - A) / N
+    x = np.linspace(A, B, N)
     sum = 0
-    for i in range(n - 1):
+    for i in range(N - 1):
         sum += ((func(x[i]) + func(x[i + 1])) / 2) * h
 
     print(f'Значение интеграла = {sum}, вычисленное с помощью специализированного ПО = {SUM}')
 
 
 def simpson_method():
-    n = 10000
-    h = (B - A) / n
-    x = np.linspace(A, B, n)
+    h = (B - A) / N
+    x = np.linspace(A, B, N)
     sum = 0
-    for i in range(1, n):
+    for i in range(1, N):
         sum += (func(x[i - 1]) + 4 * func((x[i - 1] + x[i]) / 2) + func(x[i])) / 6 * h
 
     print(f'Значение интеграла = {sum}, вычисленное с помощью специализированного ПО = {SUM}')
