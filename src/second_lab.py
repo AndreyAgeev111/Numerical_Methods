@@ -36,7 +36,6 @@ def show_func():
 
 
 def square_method():
-    # На сколько кусочков разобьем интервал
     sum = 0
     for i in range(N - 1):
         sum += func((X[i] + X[i + 1]) / 2) * H
