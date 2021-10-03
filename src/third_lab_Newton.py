@@ -30,9 +30,7 @@ def derivative_second_func_y(y):
 def Newton_method():
     x = 0.6
     y = -0.3
-    root_x = 1
-    root_y = 1
-    while abs(root_x - x) >= ACCURACY and abs(root_y - y) >= ACCURACY:
+    while True:
         root_x = x
         root_y = y
         A = [[derivative_first_func_x(x), derivative_first_func_y()],
@@ -44,4 +42,6 @@ def Newton_method():
         answer = Gauss(A, B, A_copy, B_copy)
         x += answer[0]
         y += answer[1]
+        if abs(root_x - x) <= ACCURACY and abs(root_y - y) <= ACCURACY:
+            break
     print(f'Корни системы уравнений: x = {x}, y = {y}')
