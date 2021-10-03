@@ -30,9 +30,15 @@ _____
 -----
 Третья лабораторная работа
 Метод Гаусса
+### СЛАУ
+![Alt-текст](https://github.com/AndreyAgeev111/Numerical_Methods/blob/master/res/slau.png "СЛАУ")
+-----
 ### Блок-схема метода:
 ![Alt-текст](https://github.com/AndreyAgeev111/Numerical_Methods/blob/master/res/flowchart_3_1.png "Блок-схема")
 -----
 Метод Ньютона
+### СНАУ
+![Alt-текст](https://github.com/AndreyAgeev111/Numerical_Methods/blob/master/res/snau.png "СНАУ")
+-----
 ### Блок-схема метода:
 ![Alt-текст](https://github.com/AndreyAgeev111/Numerical_Methods/blob/master/res/flowchart_3_2.png "Блок-схема")
