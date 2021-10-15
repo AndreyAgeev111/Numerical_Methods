@@ -1,6 +1,7 @@
 from src.first_lab import *
 from src.second_lab import *
 from src.third_lab_Newton import *
+from src.fourth_lab import *
 
 
 def first_lab():
@@ -22,10 +23,18 @@ def third_lab():
     Gauss_method()
 
 
+def fourth_lab():
+    show_fun()
+    show_Newton()
+    cubic_interpolation_show()
+
+
 if __name__ == '__main__':
-    # Первая лабораторная
+    """# Первая лабораторная
     first_lab()
     # Вторая лабораторная
     second_lab()
     # Третья лабораторная
-    third_lab()
+    third_lab()"""
+    # Четвертая лабораторная
+    fourth_lab()
