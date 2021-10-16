@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5f54657-8c76-4deb-b783-8c1418eaebaa" name="Changes" comment="+ блок-схемы">
-      <change afterPath="$PROJECT_DIR$/src/fourth_lab.py" afterDir="false" />
+    <list default="true" id="b5f54657-8c76-4deb-b783-8c1418eaebaa" name="Changes" comment="+ 4 лаба">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fourth_lab.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fourth_lab.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +228,9 @@
       <workItem from="1634219863617" duration="500000" />
       <workItem from="1634225462369" duration="208000" />
       <workItem from="1634316607270" duration="1732000" />
-      <workItem from="1634325092684" duration="10601000" />
+      <workItem from="1634325092684" duration="10866000" />
+      <workItem from="1634379419079" duration="2543000" />
+      <workItem from="1634385054397" duration="2062000" />
     </task>
     <task id="LOCAL-00001" summary="+ 1 лаба">
       <created>1631218100898</created>
@@ -420,7 +421,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633295751216</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="+ 4 лаба">
+      <created>1634336580710</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1634336580710</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,10 +458,11 @@
     <MESSAGE value="+ рефактор кода" />
     <MESSAGE value="+ 3 лаба, тихий ужас" />
     <MESSAGE value="+ блок-схемы" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ блок-схемы" />
+    <MESSAGE value="+ 4 лаба" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ 4 лаба" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Numerical_Methods$main.coverage" NAME="main Coverage Results" MODIFIED="1632116782179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/numericalmethods$main.coverage" NAME="main Coverage Results" MODIFIED="1634336210615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/numericalmethods$main.coverage" NAME="main Coverage Results" MODIFIED="1634387125234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -13,7 +13,7 @@ def show_fun():
     plt.grid()
     plt.xlabel('x')
     plt.ylabel('y')
-    plt.title(r'$y = x^2 - 3*x - 5.7899$')
+    plt.title(r'$y = 2 * x^2 - 3*x - 5.7899$')
     plt.show()
 
 
@@ -53,7 +53,7 @@ def show_Newton():
     print("Таблица значений для полинома Ньютона:")
     for i in range(len(p)):
         print(f'|| x = {x[i]} || y = {round(p[i], 4)} ||')
-
+    square_delta(y_data, p)
     plt.scatter(x_data, y_data, color="green", label="Изначальная функция")
     plt.plot(x, p, linestyle="dotted", color="blue", label="Полином Ньютона")
     plt.xlim([-10, 10])
@@ -61,7 +61,7 @@ def show_Newton():
     plt.legend()
     plt.xlabel('x')
     plt.ylabel('y')
-    plt.title(r'$y = x^2 - 3*x - 5.7899$')
+    plt.title(r'$y = 2 * x^2 - 3*x - 5.7899$')
     plt.show()
 
 
@@ -135,12 +135,27 @@ def cubic_interpolation_show():
     plt.xlim([-10, 10])
     spline = build_spline(x, y, 21)
     y_new = np.empty(len(x_new))
+    print("Таблица значений для кубической интерполяции сплайнами:")
     for i in range(len(x_new)):
         y_new[i] = cubic_interpolate(spline, x_new[i])
+    y_test = np.empty(len(y))
+    for i in range(len(x)):
+        print(f'|| x = {x[i]} || y = {round(cubic_interpolate(spline, x[i]), 4)} ||')
+        y_test[i] = cubic_interpolate(spline, x[i])
+    square_delta(y, y_test)
     plt.plot(x_new, y_new, linestyle="dotted", color="blue", label="Кубическая интерполяция")
     plt.grid()
     plt.legend()
     plt.xlabel('x')
     plt.ylabel('y')
-    plt.title(r'$y = x^2 - 3*x - 5.7899$')
+    plt.title(r'$y = 2 * x^2 - 3*x - 5.7899$')
     plt.show()
+
+
+def square_delta(y, y_new):
+    sum = 0
+    for i in range(len(y)):
+        sum += (y[i] - y_new[i]) ** 2
+    sum = np.sqrt(sum / len(y))
+    print(f'Среднеквадратичное отклонение для метода составало = {sum}')
+    return sum
