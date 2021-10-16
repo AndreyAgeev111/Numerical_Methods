@@ -152,10 +152,29 @@ def cubic_interpolation_show():
     plt.show()
 
 
+def get_accuracy():
+    x = np.linspace(-10, 10, 21)
+    x_data = np.linspace(-10, 10, 21)
+    y_data = function(x_data)
+    h = x[1] - x[0]
+    for i in range(len(x) - 1):
+        x[i] += h * 0.5
+    y = function(x)
+    y_newton = Newton_polynomial(x_data, y_data, x)
+    y_splines = np.empty(len(x))
+    spline = build_spline(x_data, y_data, 21)
+    for i in range(len(x)):
+        y_splines[i] = cubic_interpolate(spline, x[i])
+    print("Проверка для полинома Ньютона")
+    square_delta(y, y_newton)
+    print("Проверка для кубического сплайна")
+    square_delta(y, y_splines)
+
+
 def square_delta(y, y_new):
     sum = 0
     for i in range(len(y)):
         sum += (y[i] - y_new[i]) ** 2
     sum = np.sqrt(sum / len(y))
-    print(f'Среднеквадратичное отклонение для метода составало = {sum}')
+    print(f'Среднеквадратичное отклонение для метода составило = {sum}')
     return sum

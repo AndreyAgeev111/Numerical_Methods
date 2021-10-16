@@ -27,6 +27,7 @@ def fourth_lab():
     show_fun()
     show_Newton()
     cubic_interpolation_show()
+    get_accuracy()
 
 
 if __name__ == '__main__':
