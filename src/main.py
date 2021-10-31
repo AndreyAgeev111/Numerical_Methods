@@ -2,6 +2,7 @@ from src.first_lab import *
 from src.second_lab import *
 from src.third_lab_Newton import *
 from src.fourth_lab import *
+from src.fifth_lab import *
 
 
 def first_lab():
@@ -30,12 +31,18 @@ def fourth_lab():
     get_accuracy()
 
 
+def fifth_lab():
+    show_result()
+
+
 if __name__ == '__main__':
     """# Первая лабораторная
     first_lab()
     # Вторая лабораторная
     second_lab()
     # Третья лабораторная
-    third_lab()"""
+    third_lab()
     # Четвертая лабораторная
-    fourth_lab()
+    fourth_lab()"""
+    # Пятая лабораторная
+    fifth_lab()

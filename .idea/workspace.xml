@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5f54657-8c76-4deb-b783-8c1418eaebaa" name="Changes" comment="+ среднеквадратичное отклонение">
-      <change beforePath="$PROJECT_DIR$/src/fourth_lab.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fourth_lab.py" afterDir="false" />
+    <list default="true" id="b5f54657-8c76-4deb-b783-8c1418eaebaa" name="Changes" comment="+ среднеквадратичное отклонение для средних точек">
+      <change afterPath="$PROJECT_DIR$/src/fifth_lab.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,6 +73,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="fifth_lab" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="numericalmethods" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/fifth_lab.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -192,6 +212,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.fifth_lab" />
         <item itemvalue="Python.third_lab_Gauss" />
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.third_lab_Newton" />
@@ -230,7 +251,10 @@
       <workItem from="1634316607270" duration="1732000" />
       <workItem from="1634325092684" duration="10866000" />
       <workItem from="1634379419079" duration="2543000" />
-      <workItem from="1634385054397" duration="2942000" />
+      <workItem from="1634385054397" duration="6758000" />
+      <workItem from="1634418763369" duration="96000" />
+      <workItem from="1635705781787" duration="1592000" />
+      <workItem from="1635717980681" duration="3835000" />
     </task>
     <task id="LOCAL-00001" summary="+ 1 лаба">
       <created>1631218100898</created>
@@ -435,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634387192446</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="+ среднеквадратичное отклонение для средних точек">
+      <created>1634388079348</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1634388079348</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -467,10 +498,11 @@
     <MESSAGE value="+ блок-схемы" />
     <MESSAGE value="+ 4 лаба" />
     <MESSAGE value="+ среднеквадратичное отклонение" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ среднеквадратичное отклонение" />
+    <MESSAGE value="+ среднеквадратичное отклонение для средних точек" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ среднеквадратичное отклонение для средних точек" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Numerical_Methods$main.coverage" NAME="main Coverage Results" MODIFIED="1632116782179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/numericalmethods$main.coverage" NAME="main Coverage Results" MODIFIED="1634388059886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/numericalmethods$main.coverage" NAME="main Coverage Results" MODIFIED="1635721920522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
