@@ -47,6 +47,7 @@ def get_accuracy(x, y):
 
 
 def show_result():
+    show_fun()
     calculated = calculated_derivative(10)[110]
     true = classic_derivative(10)
     newton = Newton_derivative(10)[110]
